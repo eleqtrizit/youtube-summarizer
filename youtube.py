@@ -45,7 +45,6 @@ def handle_query(gpt_prompt):
 
 def get_transcript(video_id):
     print("Fetching transcript...")
-    video_id = "50BZQRT1dAg"
     transcript_json = YouTubeTranscriptApi.get_transcript(video_id)
     return ' '.join([x['text'] for x in transcript_json])
 
